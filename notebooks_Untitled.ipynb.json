@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "kernelspec": {
+      "name": "xpython",
+      "display_name": "Python 3.13 (XPython)",
+      "language": "python"
+    },
+    "language_info": {
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "version": "3.13.1"
+    }
+  },
+  "nbformat_minor": 5,
+  "nbformat": 4,
+  "cells": [
+    {
+      "id": "b0b411fb-c362-45f1-b9fc-665cbb29c160",
+      "cell_type": "code",
+      "source": "# Smart Light Controller using OOPS\n\nclass SmartLight:\n    \"\"\"\n    A class to represent a Smart Light.\n    It can be turned ON or OFF and display its current status.\n    \"\"\"\n\n    # Constructor to initialize light name and default status\n    def __init__(self, light_name):\n        self.light_name = light_name\n        self.status = \"OFF\"   # Default state is OFF\n\n    # Method to turn the light ON\n    def turn_on(self):\n        self.status = \"ON\"\n        print(f\"{self.light_name} is ON\")\n\n    # Method to turn the light OFF\n    def turn_off(self):\n        self.status = \"OFF\"\n        print(f\"{self.light_name} is OFF\")\n\n    # Method to display current status\n    def display_status(self):\n        print(f\"{self.light_name} current status: {self.status}\")\n\n\n# ----------- Sample Usage -----------\n\n# Taking input from user\nlight_name = input(\"Enter Light Name: \")\naction = input(\"Enter Action (ON/OFF): \").upper()\n\n# Creating object\nlight = SmartLight(light_name)\n\n# Performing action\nif action == \"ON\":\n    light.turn_on()\nelif action == \"OFF\":\n    light.turn_off()\nelse:\n    print(\"Invalid Action! Please enter ON or OFF.\")",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "Enter Light Name:  ABC\nEnter Action (ON/OFF):  ON\n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "ABC is ON\n"
+        }
+      ],
+      "execution_count": 1
+    },
+    {
+      "id": "d266dbea-0f0f-4fe6-8d55-ba43919e0ebf",
+      "cell_type": "code",
+      "source": "# Employee ID Card System using OOPS\n\nclass Employee:\n    \"\"\"\n    A class to store and display Employee ID Card details.\n    \"\"\"\n\n    # Constructor to initialize employee details\n    def __init__(self, name, emp_id, department):\n        self.name = name\n        self.emp_id = emp_id\n        self.department = department\n\n    # Method to display ID card details\n    def display_id_card(self):\n        print(\"\\nEmployee ID Card\")\n        print(\"------------------------\")\n        print(f\"Name: {self.name}\")\n        print(f\"ID: {self.emp_id}\")\n        print(f\"Department: {self.department}\")\n\n\n# ----------- Sample Usage -----------\n\n# Taking user input\nname = input(\"Enter Employee Name: \")\nemp_id = input(\"Enter Employee ID: \")\ndepartment = input(\"Enter Department: \")\n\n# Creating Employee object\nemployee = Employee(name, emp_id, department)\n\n# Displaying ID Card\nemployee.display_id_card()",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "Enter Employee Name:  ABC\nEnter Employee ID:  123\nEnter Department:  Class\n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nEmployee ID Card\n------------------------\nName: ABC\nID: 123\nDepartment: Class\n"
+        }
+      ],
+      "execution_count": 2
+    },
+    {
+      "id": "21848966-8f56-48a0-945c-814ae7572d13",
+      "cell_type": "code",
+      "source": "# Mobile Contact Record using OOPS\n\nclass Contact:\n    \"\"\"\n    A class to store and display contact details.\n    \"\"\"\n\n    # Constructor to initialize contact details\n    def __init__(self, name, phone):\n        self.name = name\n        self.phone = phone\n\n    # Method to display contact information\n    def display_contact(self):\n        print(\"\\nContact Saved\")\n        print(\"--------------------\")\n        print(f\"Name: {self.name}\")\n        print(f\"Phone: {self.phone}\")\n\n\n# ----------- Sample Usage -----------\n\n# Taking user input\nname = input(\"Enter Contact Name: \")\nphone = input(\"Enter Phone Number: \")\n\n# Creating Contact object\ncontact = Contact(name, phone)\n\n# Displaying Contact Information\ncontact.display_contact()",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "Enter Contact Name:  Prajwal\nEnter Phone Number:  567890\n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nContact Saved\n--------------------\nName: Prajwal\nPhone: 567890\n"
+        }
+      ],
+      "execution_count": 3
+    },
+    {
+      "id": "fc9800c6-beda-4e40-ad58-f1542921049a",
+      "cell_type": "code",
+      "source": "# Product Price Tag Generator using OOPS\n\nclass Product:\n    \"\"\"\n    A class to store product details and generate a formatted price tag.\n    \"\"\"\n\n    # Constructor to initialize product details\n    def __init__(self, product_name, price):\n        self.product_name = product_name\n        self.price = price\n\n    # Method to print formatted price tag\n    def print_price_tag(self):\n        print(\"\\nProduct:\", self.product_name)\n        print(f\"Price: ₹{self.price}\")\n\n\n# ----------- Sample Usage -----------\n\n# Taking user input\nproduct_name = input(\"Enter Product Name: \")\nprice = input(\"Enter Price: \")\n\n# Creating Product object\nproduct = Product(product_name, price)\n\n# Printing price tag\nproduct.print_price_tag()",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "Enter Product Name:  Prajwal\nEnter Price:  135\n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nProduct: Prajwal\nPrice: ₹135\n"
+        }
+      ],
+      "execution_count": 4
+    },
+    {
+      "id": "e15bf9f4-1073-4ebd-b9f2-5454ce4668f4",
+      "cell_type": "code",
+      "source": "# Movie Rating Display System using OOPS\n\nclass Movie:\n    \"\"\"\n    A class to store and display movie details.\n    \"\"\"\n\n    # Constructor to initialize movie details\n    def __init__(self, movie_name, rating):\n        self.movie_name = movie_name\n        self.rating = float(rating)  # Convert rating to float\n\n    # Method to display movie details\n    def display_movie(self):\n        print(\"\\nMovie:\", self.movie_name)\n        print(f\"Rating: {self.rating} / 5\")\n\n\n# ----------- Sample Usage -----------\n\n# Taking user input\nmovie_name = input(\"Enter Movie Name: \")\nrating = input(\"Enter Rating: \")\n\n# Creating Movie object\nmovie = Movie(movie_name, rating)\n\n# Displaying Movie Details\nmovie.display_movie()\n",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "Enter Movie Name:  ABC\nEnter Rating:  10.0\n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nMovie: ABC\nRating: 10.0 / 5\n"
+        }
+      ],
+      "execution_count": 5
+    },
+    {
+      "id": "d07a90ed-3c2b-452f-bc3d-35f375564a5d",
+      "cell_type": "code",
+      "source": "# Delivery Address Manager using OOPS\n\nclass Delivery:\n    \"\"\"\n    A class to store and display delivery details.\n    \"\"\"\n\n    # Constructor to initialize customer details\n    def __init__(self, customer_name, address):\n        self.customer_name = customer_name\n        self.address = address\n\n    # Method to print delivery details\n    def print_delivery_details(self):\n        print(\"\\nDelivery Details\")\n        print(\"------------------------\")\n        print(f\"Customer: {self.customer_name}\")\n        print(f\"Address: {self.address}\")\n\n\n# ----------- Sample Usage -----------\n\n# Taking user input\ncustomer_name = input(\"Enter Customer Name: \")\naddress = input(\"Enter Address: \")\n\n# Creating Delivery object\ndelivery = Delivery(customer_name, address)\n\n# Printing delivery details\ndelivery.print_delivery_details()\n",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "Enter Customer Name:  Prajwal\nEnter Address:  Namdhihalli\n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nDelivery Details\n------------------------\nCustomer: Prajwal\nAddress: Namdhihalli\n"
+        }
+      ],
+      "execution_count": 6
+    },
+    {
+      "id": "bd47bf9d-c96e-40f4-8693-47e797a9a564",
+      "cell_type": "code",
+      "source": "",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    }
+  ]
+}
